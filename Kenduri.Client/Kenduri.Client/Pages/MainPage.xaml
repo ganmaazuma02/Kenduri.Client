@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Kenduri.Client"
+             x:Class="Kenduri.Client.MainPage"
+             Visual="Material">
+
+    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Horizontal" Grid.Row="0">
+            <StackLayout Orientation="Vertical" Margin="20" HorizontalOptions="StartAndExpand">
+                <Label Text="Hello, Anas"/>
+                <Label Text="Welcome"/>
+            </StackLayout>
+            <Button Text="Profile" Margin="20"/>
+        </StackLayout>
+        <Label Grid.Row="1" HorizontalOptions="Center" Text="Kenduri" FontSize="Header"/>
+        <Label Grid.Row="2" HorizontalOptions="Center" Text="Find the best catering" FontSize="Title"/>
+        <StackLayout Grid.Row="3" Orientation="Vertical" Margin="20">
+            <Grid HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="3*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="8*"/>
+                </Grid.ColumnDefinitions>
+                <Label VerticalOptions="Center" Text="Where" Grid.Column="0" Grid.Row="0"/>
+                <Entry FontSize="Body" VerticalOptions="FillAndExpand" Placeholder="Where" Grid.Column="1" Grid.Row="0"/>
+                <Label VerticalOptions="Center" Text="Date" Grid.Column="0" Grid.Row="1"/>
+                <DatePicker FontSize="Body" VerticalOptions="FillAndExpand" Grid.Row="1" Grid.Column="1"/>
+                <Label VerticalOptions="Center" Text="Time" Grid.Column="0" Grid.Row="2"/>
+                <TimePicker FontSize="Body" VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1"/>
+            </Grid>
+            <Button BackgroundColor="BlueViolet" Text="Search"/>
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>

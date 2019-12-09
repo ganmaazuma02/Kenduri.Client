@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Kenduri.Client"
-             x:Class="Kenduri.Client.MainPage"
+             x:Class="Kenduri.Client.Pages.MainPage"
+             NavigationPage.HasNavigationBar="False"
              Visual="Material">
 
     <Grid HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
@@ -40,7 +40,8 @@
                 <Label VerticalOptions="Center" Text="Time" Grid.Column="0" Grid.Row="2"/>
                 <TimePicker FontSize="Body" VerticalOptions="FillAndExpand" Grid.Row="2" Grid.Column="1"/>
             </Grid>
-            <Button BackgroundColor="BlueViolet" Text="Search"/>
+            <Button Margin="0,20" BackgroundColor="BlueViolet" Text="Search"
+                    Clicked="Button_ClickedAsync"/>
         </StackLayout>
     </Grid>
 
